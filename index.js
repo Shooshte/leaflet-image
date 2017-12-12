@@ -32,7 +32,10 @@ module.exports = function leafletImage(map, callback) {
   // Try iterating over childNodes
   if (map._panes && map._panes.overlayPane.childNodes) {
     for (var i = 0; i < map._panes.overlayPane.childNodes.length; i++) {
-      layerQueue.defer(handlePathRoot, map._panes.overlayPane.childNodes[i]);
+      layerQueue.defer(
+        handlePathRoot,
+        map._panes.overlayPane.childNodes[i].src
+      );
     }
   }
 

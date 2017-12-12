@@ -92,7 +92,7 @@
               ) {
                 layerQueue.defer(
                   handlePathRoot,
-                  map._panes.overlayPane.childNodes[i]
+                  map._panes.overlayPane.childNodes[i].src
                 );
               }
             }
@@ -426,7 +426,8 @@
               if (!q._start)
                 try {
                   start(q);
-                } catch (e) { // let the current task complete
+                } catch (e) {
+                  // let the current task complete
                   if (q._tasks[q._ended + q._active - 1]) abort(q, e);
                 } // task errored synchronously
             }
