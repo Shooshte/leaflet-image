@@ -92,7 +92,7 @@
               ) {
                 layerQueue.defer(
                   handlePathRoot,
-                  map._panes.overlayPane.childNodes[i].src
+                  map._panes.overlayPane.childNodes[i]
                 );
               }
             }
