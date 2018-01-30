@@ -240,7 +240,7 @@ module.exports = function leafletImage(map, callback) {
 
     canvas.width = dimensions.x;
     canvas.height = dimensions.y;
-    im.crossOrigin = "";
+    im.crossOrigin = "Anonymous";
 
     im.onload = function() {
       ctx.drawImage(this, x, y, size[0], size[1]);
